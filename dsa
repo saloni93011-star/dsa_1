@@ -1,0 +1,12 @@
+matches = [
+    ("Final", "India", "Aus", 250, 240),
+    ("Semi1", "India", "Eng", 280, 270),
+    ("Semi2", "SA", "Aus", 220, 230)
+]
+
+india_wins = sum(1 for m in matches if (m[1] == "India" and m[3] > m[4]) or (m[2] == "India" and m[4] > m[3]))
+total_runs = sum(m[3] + m[4] for m in matches)
+
+print("🏏 India Wins:", india_wins)
+print("Total Runs:", total_runs)
+print("Avg Match Runs:", total_runs/3)
